@@ -28,7 +28,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Reverted to Poppins */
     line-height: 1.6;
     color: var(--light-text);
     background: var(--dark-background);
@@ -163,7 +163,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Montserrat', sans-serif; /* Applied Montserrat */
+    font-family: 'Montserrat', sans-serif; /* Reverted to Montserrat */
     color: var(--light-text); /* Ensure all main headings are light text */
 }
 
@@ -229,7 +229,7 @@ h3 {
     padding: 15px;
     border-radius: var(--border-radius);
     overflow-x: auto;
-    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-family: 'Source Code Pro', monospace; /* Applied Source Code Pro */
     font-size: 14px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
