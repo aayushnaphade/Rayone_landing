@@ -89,68 +89,196 @@ body {
     content: '';
     position: absolute;
     border-radius: 50%;
-    opacity: 0.8; /* Increased intensity */
-    filter: blur(150px); /* Increased blur for smoother glow */
+    opacity: 0.95; /* Increased opacity for more intensity */
+    filter: blur(150px) blur(100px); /* Combined blur filters for Gaussian-like effect */
     will-change: transform, background-color;
 }
 
 .moving-lights-container::before {
-    width: 500px; /* Increased radius */
-    height: 500px; /* Increased radius */
-    background: radial-gradient(circle, var(--light-color-1), transparent 50%);
-    animation: moveLight1 25s infinite alternate ease-in-out; /* Slightly longer duration */
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, var(--light-color-1), transparent 65%); /* Reduced transparent area */
+    animation: moveLight1 40s infinite alternate ease-in-out;
 }
 
 .moving-lights-container::after {
-    width: 600px; /* Increased radius */
-    height: 600px; /* Increased radius */
-    background: radial-gradient(circle, var(--light-color-2), transparent 50%);
-    animation: moveLight2 30s infinite alternate ease-in-out; /* Slightly longer duration */
+    width: 750px;
+    height: 750px;
+    background: radial-gradient(circle, var(--light-color-2), transparent 65%); /* Reduced transparent area */
+    animation: moveLight2 45s infinite alternate ease-in-out;
 }
 
 @keyframes moveLight1 {
     0% {
-        transform: translate(0, 0);
-        background: radial-gradient(circle, var(--light-color-1), transparent 50%);
+        transform: translate(0vw, 0vh);
+        background: radial-gradient(circle, var(--light-color-1), transparent 65%);
+    }
+    5% {
+        transform: translate(5vw, 10vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-1) 80%, var(--light-color-3) 20%), transparent 65%);
+    }
+    10% {
+        transform: translate(10vw, 20vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-1) 60%, var(--light-color-3) 40%), transparent 65%);
+    }
+    15% {
+        transform: translate(15vw, 30vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-1) 40%, var(--light-color-3) 60%), transparent 65%);
+    }
+    20% {
+        transform: translate(20vw, 40vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-1) 20%, var(--light-color-3) 80%), transparent 65%);
     }
     25% {
         transform: translate(25vw, 45vh);
-        background: radial-gradient(circle, var(--light-color-3), transparent 50%);
+        background: radial-gradient(circle, var(--light-color-3), transparent 65%);
+    }
+    30% {
+        transform: translate(35vw, 50vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-3) 80%, var(--light-color-4) 20%), transparent 65%);
+    }
+    35% {
+        transform: translate(45vw, 55vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-3) 60%, var(--light-color-4) 40%), transparent 65%);
+    }
+    40% {
+        transform: translate(55vw, 40vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-3) 40%, var(--light-color-4) 60%), transparent 65%);
+    }
+    45% {
+        transform: translate(60vw, 25vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-3) 20%, var(--light-color-4) 80%), transparent 65%);
     }
     50% {
         transform: translate(65vw, 15vh);
-        background: radial-gradient(circle, var(--light-color-4), transparent 50%);
+        background: radial-gradient(circle, var(--light-color-4), transparent 65%);
+    }
+    55% {
+        transform: translate(70vw, 20vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-4) 80%, var(--light-color-2) 20%), transparent 65%);
+    }
+    60% {
+        transform: translate(75vw, 25vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-4) 60%, var(--light-color-2) 40%), transparent 65%);
+    }
+    65% {
+        transform: translate(80vw, 30vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-4) 40%, var(--light-color-2) 60%), transparent 65%);
+    }
+    70% {
+        transform: translate(45vw, 60vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-4) 20%, var(--light-color-2) 80%), transparent 65%);
     }
     75% {
         transform: translate(35vw, 75vh);
-        background: radial-gradient(circle, var(--light-color-2), transparent 50%);
+        background: radial-gradient(circle, var(--light-color-2), transparent 65%);
+    }
+    80% {
+        transform: translate(25vw, 80vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-2) 80%, var(--light-color-1) 20%), transparent 65%);
+    }
+    85% {
+        transform: translate(15vw, 85vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-2) 60%, var(--light-color-1) 40%), transparent 65%);
+    }
+    90% {
+        transform: translate(5vw, 90vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-2) 40%, var(--light-color-1) 60%), transparent 65%);
+    }
+    95% {
+        transform: translate(0vw, 50vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-2) 20%, var(--light-color-1) 80%), transparent 65%);
     }
     100% {
-        transform: translate(0, 0);
-        background: radial-gradient(circle, var(--light-color-1), transparent 50%);
+        transform: translate(0vw, 0vh);
+        background: radial-gradient(circle, var(--light-color-1), transparent 65%);
     }
 }
 
 @keyframes moveLight2 {
     0% {
         transform: translate(85vw, 25vh);
-        background: radial-gradient(circle, var(--light-color-2), transparent 50%);
+        background: radial-gradient(circle, var(--light-color-2), transparent 65%);
+    }
+    5% {
+        transform: translate(75vw, 15vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-2) 80%, var(--light-color-4) 20%), transparent 65%);
+    }
+    10% {
+        transform: translate(65vw, 5vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-2) 60%, var(--light-color-4) 40%), transparent 65%);
+    }
+    15% {
+        transform: translate(55vw, -5vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-2) 40%, var(--light-color-4) 60%), transparent 65%);
+    }
+    20% {
+        transform: translate(45vw, -15vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-2) 20%, var(--light-color-4) 80%), transparent 65%);
     }
     25% {
         transform: translate(15vw, 65vh);
-        background: radial-gradient(circle, var(--light-color-4), transparent 50%);
+        background: radial-gradient(circle, var(--light-color-4), transparent 65%);
+    }
+    30% {
+        transform: translate(5vw, 50vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-4) 80%, var(--light-color-1) 20%), transparent 65%);
+    }
+    35% {
+        transform: translate(-5vw, 35vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-4) 60%, var(--light-color-1) 40%), transparent 65%);
+    }
+    40% {
+        transform: translate(-15vw, 20vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-4) 40%, var(--light-color-1) 60%), transparent 65%);
+    }
+    45% {
+        transform: translate(-25vw, 5vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-4) 20%, var(--light-color-1) 80%), transparent 65%);
     }
     50% {
         transform: translate(95vw, 85vh);
-        background: radial-gradient(circle, var(--light-color-1), transparent 50%);
+        background: radial-gradient(circle, var(--light-color-1), transparent 65%);
+    }
+    55% {
+        transform: translate(80vw, 70vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-1) 80%, var(--light-color-3) 20%), transparent 65%);
+    }
+    60% {
+        transform: translate(65vw, 55vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-1) 60%, var(--light-color-3) 40%), transparent 65%);
+    }
+    65% {
+        transform: translate(50vw, 40vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-1) 40%, var(--light-color-3) 60%), transparent 65%);
+    }
+    70% {
+        transform: translate(35vw, 25vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-1) 20%, var(--light-color-3) 80%), transparent 65%);
     }
     75% {
         transform: translate(45vw, 35vh);
-        background: radial-gradient(circle, var(--light-color-3), transparent 50%);
+        background: radial-gradient(circle, var(--light-color-3), transparent 65%);
+    }
+    80% {
+        transform: translate(60vw, 20vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-3) 80%, var(--light-color-2) 20%), transparent 65%);
+    }
+    85% {
+        transform: translate(75vw, 5vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-3) 60%, var(--light-color-2) 40%), transparent 65%);
+    }
+    90% {
+        transform: translate(90vw, -10vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-3) 40%, var(--light-color-2) 60%), transparent 65%);
+    }
+    95% {
+        transform: translate(100vw, 0vh);
+        background: radial-gradient(circle, color-mix(in srgb, var(--light-color-3) 20%, var(--light-color-2) 80%), transparent 65%);
     }
     100% {
         transform: translate(85vw, 25vh);
-        background: radial-gradient(circle, var(--light-color-2), transparent 50%);
+        background: radial-gradient(circle, var(--light-color-2), transparent 65%);
     }
 }
 
