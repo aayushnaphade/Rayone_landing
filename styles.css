@@ -286,6 +286,11 @@ body {
 .workflow-step {
     text-align: center;
     padding: 30px;
+    border-radius: 40px;
+}
+.workflow-step:hover{
+    box-shadow: 0 8px 32px 0 rgba(159,9,247,0.10);
+    border-color: #9f09f7;
 }
 
 .step-icon {
