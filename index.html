@@ -17,8 +17,8 @@
     <meta property="og:title" content="Rayone: Hosted LLM APIs for Developers – Mistral, LLaMA, Gemma">
 <meta property="og:description" content="Fast, scalable APIs for open-source LLMs. No GPU setup. Built for developers, startups, and AI teams.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rayone.com/">
-<meta property="og:image" content="https://rayone.com/og-image.png">
+<meta property="og:url" content="https://rayoneai.com/">
+<meta property="og:image" content="https://rayoneai.com/og-image.png">
 <meta property="og:site_name" content="Rayone">
 </head>
 
@@ -241,54 +241,7 @@ print(output)</code></pre>
             <h2 class="section-title">Blogs</h2>
             <!-- <p class="blog-subtitle">Learn how to grow your business with our expert advice.</p> -->
             <div class="blog-grid">
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Blog 1" class="blog-img">
-                    <div class="blog-meta">
-                        <span class="blog-date">Mar 16, 2020</span>
-                        <!-- <span class="blog-tag">Marketing</span> -->
-                    </div>
-                    <h3 class="blog-post-title">Boost your conversion rate</h3>
-                    <p class="blog-excerpt">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla...</p>
-                    <div class="blog-author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Foster" class="author-img">
-                        <div>
-                            <span class="author-name">Rayone</span>
-                            <!-- <span class="author-role">Co-Founder / CTO</span> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Blog 2" class="blog-img">
-                    <div class="blog-meta">
-                        <span class="blog-date">Mar 10, 2020</span>
-                        <!-- <span class="blog-tag">Sales</span> -->
-                    </div>
-                    <h3 class="blog-post-title">How to use search engine optimization to drive sales</h3>
-                    <p class="blog-excerpt">Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.</p>
-                    <div class="blog-author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Lindsay Walton" class="author-img">
-                        <div>
-                            <span class="author-name">Rayone</span>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Blog 3" class="blog-img">
-                    <div class="blog-meta">
-                        <span class="blog-date">Feb 12, 2020</span>
-                        <!-- <span class="blog-tag">Business</span> -->
-                    </div>
-                    <h3 class="blog-post-title">Improve your customer experience</h3>
-                    <p class="blog-excerpt">Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labor...</p>
-                    <div class="blog-author">
-                        <img src="https://randomuser.me/api/portraits/men/97.jpg" alt="Tom Cook" class="author-img">
-                        <div>
-                            <span class="author-name">Rayone</span>
-                          
-                        </div>
-                    </div>
-                </div>
+                <!-- Blog cards will be dynamically populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -314,6 +267,7 @@ print(output)</code></pre>
             <div class="footer-bottom">
                 <p>© 2025 RayoneAI</p>
                 <div class="social-icons">
+                    <p>Follow us on:</p>
                     <a href="https://www.producthunt.com/products/rayone"><i class="fab fa-product-hunt"></i></a>
                     <a href="https://www.linkedin.com/company/rayoneai/"><i class="fab fa-linkedin"></i></a>
                 </div>
@@ -322,6 +276,30 @@ print(output)</code></pre>
     </footer>
 
     <script src="script.js"></script>
+    <script type="module">
+        import { blogs } from './blogData.js';
+
+        const blogGrid = document.querySelector('.blog-grid');
+        if (blogGrid) {
+            blogGrid.innerHTML = blogs.map(blog => `
+                <div class="blog-card">
+                    <a href="blogs.html?id=${blog.id}"><img src="${blog.img}" alt="${blog.title}" class="blog-img"></a>
+                    <div class="blog-meta">
+                        <span class="blog-date">${blog.date}</span>
+                    </div>
+                    <a href="blogs.html?id=${blog.id}" class="blog-post-title" style="text-decoration:none;"><h3 class="blog-post-title">${blog.title}</h3></a>
+                    <p class="blog-excerpt">${blog.excerpt}</p>
+                    <a href="blogs.html?id=${blog.id}" style="color:#9f09f7;font-weight:600;display:inline-block;margin:0 24px 10px 24px;">Read more →</a>
+                    <div class="blog-author">
+                        <img src="${blog.authorImg}" alt="${blog.author}" class="author-img">
+                        <div>
+                            <span class="author-name">${blog.author}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 </body>

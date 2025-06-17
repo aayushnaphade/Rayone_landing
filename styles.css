@@ -264,9 +264,9 @@ body {
 .workflow-section {
     padding: 100px 0;
     background: rgb(51, 51, 51);
-    border-radius: 70px;
-    margin-left: 70px;
-    margin-right: 50px;
+    border-radius: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .workflow-section h2 {
