@@ -36,11 +36,10 @@ export const blogs = [
 
 <h2>What's next?</h2>
 
-<p>We're launching early access to developers and teams who want to experiment with hosted LLMs. Our <a href="/playground">Playground</a> is live, and we'll be shipping regular updates, new models, and tutorials every week.</p>
+<p>We're launching early access to developers and teams who want to experiment with hosted LLMs.</p>
 
 <p>Stay tuned. The future of AI infra is open, fast, and simple — and we're just getting started.</p>
 
-<a href="/playground" class="cta-btn">Try Rayone Playground →</a>
 
 
 `
