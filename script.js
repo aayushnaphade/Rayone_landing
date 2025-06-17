@@ -53,46 +53,124 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Currency switcher
+    const currencyButtons = document.querySelectorAll('.currency-switcher button');
+    const pricingCards = document.querySelectorAll('.pricing-card .price');
+    
+    const prices = {
+        INR: {
+            free: '₹0',
+            developer: '₹499',
+            team: '₹1999',
+            enterprise: 'Custom'
+        },
+        USD: {
+            free: '$0',
+            developer: '$6',
+            team: '$24',
+            enterprise: 'Custom'
+        }
+    };
+
+    currencyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Update active state
+            currencyButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Update prices
+            const currency = button.textContent;
+            pricingCards.forEach((card, index) => {
+                const plan = ['free', 'developer', 'team', 'enterprise'][index];
+                card.textContent = prices[currency][plan];
+            });
+        });
+    });
+
+    // Form submission
+    const signupForm = document.querySelector('.signup-form');
+    if (signupForm) {
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = signupForm.querySelector('input[type="email"]').value;
+            
+            try {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbz1eaTbhO6Jq1Ir2-jC4Mgs3scNjkSsfS9JvT3v1LsoQZu7zZFfl4Ybjsg-SWCOgYOg/exec', {
+                    method: 'POST',
+                    body: new FormData(signupForm),
+                    mode: 'no-cors'
+                });
+
+                // Show success message
+                const successMessage = document.createElement('p');
+                successMessage.textContent = 'Thanks for joining! We\'ll keep you updated.';
+                successMessage.style.color = 'var(--accent-1)';
+                signupForm.appendChild(successMessage);
+                signupForm.reset();
+
+                // Remove message after 3 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 3000);
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = 'There was an error. Please try again later.';
+                errorMessage.style.color = 'var(--accent-2)';
+                signupForm.appendChild(errorMessage);
+
+                setTimeout(() => {
+                    errorMessage.remove();
+                }, 3000);
+            }
+        });
+    }
+
+    // GitHub signup
+    const githubButton = document.querySelector('.github-button');
+    if (githubButton) {
+        githubButton.addEventListener('click', () => {
+            // Replace with your GitHub OAuth URL
+            window.location.href = 'https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI';
+        });
+    }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
     // Intersection Observer for scroll animations
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1 // Trigger when 10% of the element is visible
+        threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.remove('hidden-scroll');
-                entry.target.classList.add('show-scroll');
-                // For the hero section elements, apply specific animations
-                if (entry.target.classList.contains('hero-content')) {
-                    entry.target.style.animation = 'fadeInUp 1s ease-out forwards';
-                } else if (entry.target.classList.contains('code-snippet-card')) {
-                    entry.target.style.animation = 'fadeInRight 1s ease-out forwards';
-                }
-                // For content sections, animate internal elements
-                if (entry.target.classList.contains('content-section') || entry.target.classList.contains('interest-form-section')) {
-                    const h2 = entry.target.querySelector('h2');
-                    const subtitle = entry.target.querySelector('.subtitle');
-                    const grids = entry.target.querySelectorAll('.features-grid, .steps-grid');
-
-                    if (h2) h2.style.animation = 'fadeInUp 1s ease-out forwards';
-                    if (subtitle) subtitle.style.animation = 'fadeInUp 1.2s ease-out forwards';
-                    grids.forEach(grid => grid.style.animation = 'fadeIn 1.5s ease-out forwards');
-
-                    // For interest form, specifically target the form
-                    const emailFormSection = entry.target.querySelector('.email-form');
-                    if (emailFormSection) emailFormSection.style.animation = 'fadeInUp 1s ease-out forwards';
-                }
-
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe elements with the 'hidden-scroll' class
-    document.querySelectorAll('.hidden-scroll').forEach(element => {
-        observer.observe(element);
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(section);
     });
 }); 

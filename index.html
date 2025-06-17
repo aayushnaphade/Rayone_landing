@@ -1,67 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayone - Run AI with an API</title>
+    <title>Rayone: Hosted LLM APIs for Developers – Mistral, LLaMA, Gemma</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <meta name="description" content="Rayone offers fast, scalable APIs for open-source LLMs like Mistral, LLaMA, and Gemma. No GPU setup. Built for developers, startups, and AI teams.">
+    <meta name="keywords" content="LLM API India, Open-source AI API, Hosted Mistral model, Inference-as-a-service, AI infra for developers, Mistral API India, LLaMA API hosting, Gemma API SaaS, Scalable LLM API, No GPU AI API, Developer AI backend, Open-source LLM deployment, API for open-source language models, AI API for startups, Managed LLM hosting">
+
+    <meta property="og:title" content="Rayone: Hosted LLM APIs for Developers – Mistral, LLaMA, Gemma">
+<meta property="og:description" content="Fast, scalable APIs for open-source LLMs. No GPU setup. Built for developers, startups, and AI teams.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rayone.com/">
+<meta property="og:image" content="https://rayone.com/og-image.png">
+<meta property="og:site_name" content="Rayone">
 </head>
+
 <body>
     <header class="main-header">
-        <div class="logo-container">
-            <img src="assets/rayone-logo.png" alt="Rayone Logo">
-            <span>RayOne</span>
+        <div class="container">
+            <div class="logo-container">
+                <img src="assets/rayone-logo.png" alt="Rayone Logo">
+                <span>RayOne</span>
+            </div>
+            <nav class="main-nav">
+               
+                <a href="#blog">Blogs</a>
+                <button class="primary-button"
+                            onclick="document.getElementById('footer-cta').scrollIntoView({behavior: 'smooth'});">Try
+                            for Free</button>
+               
+            </nav>
         </div>
     </header>
-    <div class="moving-lights-container"></div>
-    <div class="animated-background"></div>
+
     <main>
         <section class="hero-section">
             <div class="container">
-                <div class="hero-content hidden-scroll">
-                    <h1>AI Dreams, Simplified. We Handle the Heavy Lifting.</h1>
-                    <p>Run and fine-tune models. Deploy custom models at scale. All with one line of code.</p>
-                </div>
-                <div class="code-snippet-card hidden-scroll">
-                    <pre><code class="language-python">import rayone
-
+                <div class="hero-content">
+                    <div>
+                        <a href="https://www.producthunt.com/products/rayone?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-rayone"
+                            target="_blank"><img
+                                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=976494&theme=dark&t=1750136972267"
+                                alt="Rayone - Instant&#0032;APIs&#0032;for&#0032;Open&#0032;Models | Product Hunt"
+                                style="width: 200px; height: 47px;" width="200" height="47" /></a>
+                    </div>
+                    <h1>Run Open-Source LLMs. No GPUs Required.</h1>
+                    <p class="subtitle">Instant API access to Mistral, LLaMA, Gemma, and more — hosted, scalable, and
+                        ready to deploy.</p>
+                    <div class="cta-buttons">
+                        <button class="cta-button">Comming Soon</button>
+                        <!-- <button class="secondary-button">Book a Demo</button> -->
+                    </div>
+                    <!-- <div class="code-snippet-card">
+                        <pre><code class="language-bash">
+import rayone
 output = rayone.run(
-    "black-forest-labs/flux-dev",
-    input={
-        "aspect_ratio": "1:1",
-        "num_outputs": 1,
-        "output_format": "jpg",
-        "output_quality": 80,
-        "prompt": "An astronaut riding a rainbow unicorn,"
-    }
+"black-forest-labs/flux-dev",
+input={
+"aspect_ratio": "1:1",
+"num_outputs": 1,
+"output_format": "jpg",
+"output_quality": 80,
+"prompt": "An astronaut riding a rainbow unicorn,"
+}
 )
-
+                            
 print(output)</code></pre>
-                    <button class="copy-btn">Copy</button>
+                        <button class="copy-btn">Copy</button>
+                    </div> -->
+
+                    <!-- From Uiverse.io by emmanuelh-dev --> 
+                    <!-- <div class="custom-code-window">
+                        <div class="custom-code-header">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                            <span class="custom-code-title">ProgressBar.tsx</span>
+                        </div>
+                        <div class="custom-code-body">
+                            <pre><code class="language-jsx">&lt;Card&gt;
+  &lt;Text&gt;<span class="hl">Ticket Sales</span>&lt;/Text&gt;
+  &lt;Metric&gt;<span class="hl">$ 71,465</span>&lt;/Metric&gt;
+  &lt;Flex className=<span class="hl">"mt-3"</span>&gt;
+    &lt;Text&gt;&lt;Bold&gt;<span class="hl">32%</span>&lt;/Bold&gt;<span class="hl">of annual target</span>&lt;/Text&gt;
+    &lt;Text&gt;<span class="hl">$ 223,328</span>&lt;/Text&gt;
+  &lt;/Flex&gt;
+  &lt;ProgressBar value={<span class="hl">32</span>} className=<span class="hl">"mt-3"</span> /&gt;
+&lt;/Card&gt;</code></pre>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </section>
 
-        <section class="content-section key-features-section hidden-scroll">
+        <section class="features-section">
             <div class="container">
-                <h2>Unlock the Power of AI with Rayone.</h2>
-                <p class="subtitle">Seamlessly integrate, deploy, and scale your AI models.</p>
+                <h2>Key Features</h2>
                 <div class="features-grid">
                     <div class="feature-item">
-                        <i class="fas fa-cloud-upload-alt"></i>
+                        <i class="fas fa-server"></i>
                         <h3>Open-Source Model Hosting</h3>
                         <p>Access a vast library of open-source AI models, ready for deployment.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-money-check-alt"></i>
+                        <i class="fas fa-rocket"></i>
                         <h3>Subscription-Based API</h3>
                         <p>Flexible and scalable API access to fit your project's needs and budget.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-rocket"></i>
+                        <i class="fas fa-chart-line"></i>
                         <h3>Effortless Deployment</h3>
                         <p>Deploy custom models with a single line of code, no complex infrastructure.</p>
                     </div>
@@ -71,12 +125,12 @@ print(output)</code></pre>
                         <p>Tailor models to your specific datasets and achieve superior results.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-globe"></i>
                         <h3>Scalable Infrastructure</h3>
                         <p>Our robust backend ensures your models perform reliably at any scale.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-headset"></i>
+                        <i class="fas fa-globe"></i>
                         <h3>Dedicated Support</h3>
                         <p>Get expert assistance whenever you need it, ensuring smooth operations.</p>
                     </div>
@@ -84,50 +138,192 @@ print(output)</code></pre>
             </div>
         </section>
 
-        <section class="content-section how-it-works-section hidden-scroll">
+        <section class="workflow-section">
             <div class="container">
-                <h2>How Rayone Works</h2>
-                <div class="steps-grid">
-                    <div class="step-item">
+                <h2>Your GenAI backend, minus the infra stress</h2>
+                <div class="workflow-diagram">
+                    <div class="workflow-step">
                         <div class="step-icon"><i class="fas fa-cube"></i></div>
+                        <h3>Pick Model</h3>
+                        <p>Choose from our curated list of OSS models</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-icon"><i class="fas fa-key"></i></div>
+                        <h3>Get API Key</h3>
+                        <p>Generate your secure API key</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Deploy</h3>
+                        <p>Deploy with a single API call</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Monitor</h3>
+                        <p>Track usage and performance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="integrations-section">
+            <div class="container">
+                <h2>Plug into your stack in minutes</h2>
+                <div class="integrations-grid">
+                    <div class="integration-item">
+                        <i class="fab fa-python"></i>
+                        <span>LangChain</span>
+                    </div>
+                    <div class="integration-item">
+                        <i class="fab fa-python"></i>
+                        <span>Haystack</span>
+                    </div>
+                    <div class="integration-item">
+                        <i class="fab fa-python"></i>
+                        <span>FastAPI</span>
+                    </div>
+                    <div class="integration-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="integration-item">
+                        <i class="fab fa-python"></i>
+                        <span>Streamlit</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Rayone Works Section -->
+        <section class="how-works-section">
+            <div class="container">
+                <h2 class="section-title">How Rayone Works</h2>
+                <div class="how-works-grid">
+                    <div class="how-works-card">
+                        <div class="how-works-icon">
+                            <!-- Example SVG icon -->
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="20" fill="#9f09f7" fill-opacity="0.12"/>
+                                <path d="M18 24h12M24 18v12" stroke="#9f09f7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <h3>Choose Your Model</h3>
                         <p>Select from our curated list of open-source models or bring your own.</p>
                     </div>
-                    <div class="step-item">
-                        <div class="step-icon"><i class="fas fa-code"></i></div>
+                    <div class="how-works-card">
+                        <div class="how-works-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="20" fill="#9f09f7" fill-opacity="0.12"/>
+                                <path d="M16 24h16M24 16v16" stroke="#9f09f7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <h3>Integrate with Ease</h3>
                         <p>Use our simple API to integrate AI into your applications in minutes.</p>
                     </div>
-                    <div class="step-item">
-                        <div class="step-icon"><i class="fas fa-expand-alt"></i></div>
+                    <div class="how-works-card">
+                        <div class="how-works-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="20" fill="#9f09f7" fill-opacity="0.12"/>
+                                <path d="M18 30l6-12 6 12" stroke="#9f09f7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <h3>Scale as You Grow</h3>
                         <p>Our platform handles scalability, so you can focus on innovation.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="interest-form-section hidden-scroll">
-            <div class="container">
-                <h2>Coming Soon!</h2>
-                <p>Enter your email to show your interest and stay updated:</p>
-                <form class="email-form" id="email-interest-form">
-                    <input type="email" name="email" placeholder="Your email address" required>
-                    <button type="submit" class="btn submit-email">Notify Me</button>
-                </form>
-                <p id="form-message" style="margin-top: 20px; color: yellow;"></p>
-            </div>
-        </section>
     </main>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <h2 class="section-title">Blogs</h2>
+            <!-- <p class="blog-subtitle">Learn how to grow your business with our expert advice.</p> -->
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Blog 1" class="blog-img">
+                    <div class="blog-meta">
+                        <span class="blog-date">Mar 16, 2020</span>
+                        <!-- <span class="blog-tag">Marketing</span> -->
+                    </div>
+                    <h3 class="blog-post-title">Boost your conversion rate</h3>
+                    <p class="blog-excerpt">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla...</p>
+                    <div class="blog-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Foster" class="author-img">
+                        <div>
+                            <span class="author-name">Rayone</span>
+                            <!-- <span class="author-role">Co-Founder / CTO</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Blog 2" class="blog-img">
+                    <div class="blog-meta">
+                        <span class="blog-date">Mar 10, 2020</span>
+                        <!-- <span class="blog-tag">Sales</span> -->
+                    </div>
+                    <h3 class="blog-post-title">How to use search engine optimization to drive sales</h3>
+                    <p class="blog-excerpt">Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.</p>
+                    <div class="blog-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Lindsay Walton" class="author-img">
+                        <div>
+                            <span class="author-name">Rayone</span>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Blog 3" class="blog-img">
+                    <div class="blog-meta">
+                        <span class="blog-date">Feb 12, 2020</span>
+                        <!-- <span class="blog-tag">Business</span> -->
+                    </div>
+                    <h3 class="blog-post-title">Improve your customer experience</h3>
+                    <p class="blog-excerpt">Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labor...</p>
+                    <div class="blog-author">
+                        <img src="https://randomuser.me/api/portraits/men/97.jpg" alt="Tom Cook" class="author-img">
+                        <div>
+                            <span class="author-name">Rayone</span>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p>Built with love, made in India 💖</p>
+            <section class="cta-section" id="footer-cta">
+                <div class="container">
+                    <h2>Try it now → rayone.com</h2>
+                    <p>No setup. No GPUs. Just APIs.</p>
+                    <form class="signup-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="primary-button">Join Waitlist</button>
+                    </form>
+                    <!-- <div class="github-signup">
+                        <button class="github-button">
+                            <i class="fab fa-github"></i>
+                            Sign up with GitHub
+                        </button>
+                    </div> -->
+                </div>
+            </section>
+            <div class="footer-bottom">
+                <p>© 2025 RayoneAI</p>
+                <div class="social-icons">
+                    <a href="https://www.producthunt.com/products/rayone"><i class="fab fa-product-hunt"></i></a>
+                    <a href="https://www.linkedin.com/company/rayoneai/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 </body>
-</html> 
+
+</html>
