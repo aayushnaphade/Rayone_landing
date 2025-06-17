@@ -31,7 +31,7 @@
         </div>
     </header>
     <main>
-        <section class="blog-post-section" id="blog-post-section" style="padding-top:120px; min-height:60vh;">
+        <section class="blog-post-section" id="blog-post-section" style="padding-top:120px; padding-bottom: 80px; min-height:60vh;">
             <div class="container" id="blog-post-container">
                 <!-- Blog post will be rendered here -->
             </div>
@@ -101,7 +101,7 @@
                     <span style="color:#b3b3b3;">• ${blog.date}</span>
                 </div>
                 <blockquote style="border-left:5px solid #9f09f7;padding-left:18px;margin:0 0 32px 0;color:#b3b3b3;font-size:1.15rem;background:rgba(159,9,247,0.04);font-weight:500;">${blog.excerpt}</blockquote>
-                <div style="color:#fff;font-size:1.15rem;line-height:1.7;">${blog.content}</div>
+                <div class="blog-content-body" style="color:#fff;font-size:1.1rem;line-height:1.7;margin-bottom:60px;">${blog.content}</div>
             </div>
         </div>
         `;
