@@ -57,21 +57,29 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+ 
 }
 
-.logo-container img {
+.logo-link {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.logo-link img {
     height: 40px;
     filter: brightness(0) invert(1);
+    margin-right: 8px;
 }
 
-.logo-container span {
+.logo-link span {
     font-size: 24px;
     font-weight: 700;
     color: white;
     letter-spacing: 1px;
+    line-height: 1;
 }
-
 .main-nav {
     display: flex;
     align-items: center;
