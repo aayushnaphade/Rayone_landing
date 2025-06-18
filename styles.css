@@ -620,6 +620,7 @@ footer {
 
     .signup-form {
         flex-direction: column;
+        
     }
 
     .main-nav {
@@ -942,10 +943,101 @@ footer {
 }
 
 /* Placeholder for removed JavaScript to fix linter errors */
+.built-with-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: var(--primary-bg);
+    padding: 60px 0 40px 0;
+    overflow: hidden;
+}
 
-signupForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = signupForm.querySelector('input[type="email"]').value;
-    console.log('Form submitted with email:', email); // Debug log
-    // ... existing code ...
-}); 
+.built-with-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 32px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -1px;
+    z-index: 2;
+    position: relative;
+}
+
+.built-with-marquee {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    background: #181818;
+}
+
+.built-with-track {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    animation: marquee-left 18s linear infinite;
+    will-change: transform;
+}
+
+.built-with-track img {
+    height: 60px;
+    width: auto;
+    gap: 200px;
+    filter: grayscale(1) brightness(0.8);
+    opacity: 0.85;
+    transition: filter 0.2s, opacity 0.2s;
+}
+
+.built-with-track img:hover {
+    filter: none;
+    opacity: 1;
+   
+}
+
+/* Blur/Fade effect on both ends */
+.built-with-fade {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.built-with-fade-left {
+    left: 0;
+    background: linear-gradient(to right, #181818 70%, rgba(24,24,24,0));
+}
+
+.built-with-fade-right {
+    right: 0;
+    background: linear-gradient(to left, #181818 70%, rgba(24,24,24,0));
+}
+
+@keyframes marquee-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive: reduce fade width and logo size on mobile */
+@media (max-width: 600px) {
+    .built-with-fade {
+        width: 40px;
+    }
+    .built-with-track img {
+        height: 36px;
+    }
+    .built-with-marquee {
+        height: 56px;
+    }
+}
