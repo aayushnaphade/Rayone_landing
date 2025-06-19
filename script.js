@@ -173,4 +173,20 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(section);
     });
+
+    const navToggle = document.getElementById('mobile-nav-toggle');
+    const mainNav = document.getElementById('main-nav');
+    if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('open');
+            mainNav.classList.toggle('open');
+        });
+        // Close menu when a nav link is clicked
+        mainNav.querySelectorAll('a, button').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navToggle.classList.remove('open');
+                mainNav.classList.remove('open');
+            });
+        });
+    }
 }); 
