@@ -17,6 +17,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -96,6 +100,16 @@ body {
 
 .main-nav a:hover {
     color: var(--accent-1);
+}
+
+.github-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.github-nav-link i {
+    font-size: 1.1rem;
 }
 
 /* Buttons */

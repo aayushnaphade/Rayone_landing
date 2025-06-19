@@ -5,6 +5,7 @@ export const blogs = [
         date: "July 20, 2025",
         author: "Ayush Naphade",
         authorImg: "https://media.licdn.com/dms/image/v2/D4E03AQFGMnknqQtkbA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714303522830?e=1755734400&v=beta&t=brT6r68qJZ3d-xvb5U_53BzjPZTc8GzWZV1YsBeKuyc",
+        authorLinkedIn: "https://www.linkedin.com/in/aayushnaphade/",
         img: "assets/Rayone (3).png",
         topic: "Introduction",
         excerpt: "Say goodbye to complex GPU setups. Rayone offers hosted APIs for open-source LLMs like Mistral, LLaMA, and Gemma — making AI infrastructure accessible to developers and startups, starting from India.",
@@ -44,13 +45,13 @@ export const blogs = [
 
 `
     },
-    {
-        id: 2,
+    {        id: 2,
         title: "How AI Is Revolutionizing Open‑Source Development ",
         date: "July 17, 2025",
         author: "Mahesh Kumawat",
         authorImg: "https://ph-avatars.imgix.net/8614694/0afc824a-57f9-4e3f-9c3c-09141c89ec45.jpeg?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=120&h=120&fit=crop&frame=1&dpr=2",
-        img: "https://engineering.fb.com/wp-content/uploads/2009/04/Open-Source-Word-Cloud.jpg",
+        authorLinkedIn: "#",
+        img: "https://th.bing.com/th/id/OIP.ZuMKKtITdz82Ag4s68kJOQHaEO?rs=1&pid=ImgDetMain&cb=idpwebpc2",
         topic: "Open Source",
         excerpt: "Open-source development is undergoing a seismic shift. AI-powered tools are not just suggesting code—they’re reshaping workflows, governance, and collaboration. But with these innovations come pressing challenges around legality, quality, and community dynamics",
         content: `<article>

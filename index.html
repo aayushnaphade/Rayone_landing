@@ -30,10 +30,9 @@
                      <img src="assets/rayone-logo.png" alt="Rayone Logo">   
                     <span>Rayone</span></a>
             
-            </div>
-         
-            <nav class="main-nav" id="main-nav">
+            </div>            <nav class="main-nav" id="main-nav">
                 <a href="#blog">Blogs</a>
+                <a href="https://github.com/RayOneAi" target="_blank" class="github-nav-link"><i class="fab fa-github"></i> GitHub</a>
                 <button class="primary-button"
                     onclick="document.getElementById('footer-cta').scrollIntoView({behavior: 'smooth'});">Try
                     for Free</button>
@@ -54,9 +53,8 @@
                     </div>
                     <h1>Run Open-Source LLMs. No GPUs Required.</h1>
                     <p class="subtitle">Instant API access to Mistral, LLaMA, Gemma, and more — hosted, scalable, and
-                        ready to deploy.</p>
-                    <div class="cta-buttons">
-                        <button class="cta-button">Comming Soon</button>
+                        ready to deploy.</p>                    <div class="cta-buttons">
+                        <button class="cta-button" data-scroll-target="footer-cta">Coming Soon</button>
                         <!-- <button class="secondary-button">Book a Demo</button> -->
                     </div>
                     <!-- <div class="code-snippet-card">
@@ -242,9 +240,8 @@ print(output)</code></pre>
             <section class="cta-section" id="footer-cta">
                 <div class="container">
                     <h2>Try it now → rayone.com</h2>
-                    <p>No setup. No GPUs. Just APIs.</p>
-                    <form class="signup-form">
-                        <input type="email" style="color: black;" placeholder="Enter your email" required>
+                    <p>No setup. No GPUs. Just APIs.</p>                    <form class="signup-form" data-form-type="email-capture" data-source="footer_waitlist">
+                        <input type="email" style="color: black;" name="email" placeholder="Enter your email" required>
                         <button type="submit" class="primary-button">Join Waitlist</button>
                     </form>
                     <!-- <div class="github-signup">
@@ -280,11 +277,12 @@ print(output)</code></pre>
                     </div>
                     <a href="blogs.html?id=${blog.id}" class="blog-post-title" style="text-decoration:none;"><h3 class="blog-post-title">${blog.title}</h3></a>
                     <p class="blog-excerpt">${blog.excerpt}</p>
-                    <a href="blogs.html?id=${blog.id}" style="color:#9f09f7;font-weight:600;display:inline-block;margin:0 24px 10px 24px;">Read more →</a>
-                    <div class="blog-author">
+                    <a href="blogs.html?id=${blog.id}" style="color:#9f09f7;font-weight:600;display:inline-block;margin:0 24px 10px 24px;">Read more →</a>                    <div class="blog-author">
                         <img src="${blog.authorImg}" alt="${blog.author}" class="author-img">
                         <div>
-                            <span class="author-name">${blog.author}</span>
+                            <a href="${blog.authorLinkedIn || '#'}" target="_blank" style="text-decoration:none;" title="View LinkedIn Profile">
+                                <span class="author-name">${blog.author} <i class="fab fa-linkedin" style="font-size:0.8rem;color:#0077b5;"></i></span>
+                            </a>
                         </div>
                     </div>
                 </div>
