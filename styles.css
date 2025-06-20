@@ -1,6 +1,6 @@
 /* General styles */
 :root {
-    --primary-bg:rgb(23, 23, 23);
+    --primary-bg:#s;
     --accent-1: #bd4bff;
     --accent-2: #7a07c7;
     --text-secondary: #B3B3B3;
@@ -974,12 +974,12 @@ footer {
     margin-right: -50vw;
     background: var(--primary-bg);
     padding: 60px 0 40px 0;
-    overflow: hidden;
+    overflow: hidden;   
 }
 
 .built-with-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 36px;
     font-weight: 700;
     color: #fff;
     margin-bottom: 32px;
@@ -990,7 +990,7 @@ footer {
 }
 
 .built-with-marquee {
-    position: relative;
+    position: relative; 
     width: 100vw;
     overflow: hidden;
     height: 90px;
