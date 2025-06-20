@@ -1,6 +1,6 @@
 /* General styles */
 :root {
-    --primary-bg:#s;
+    --primary-bg:rgb(23, 23, 23);
     --accent-1: #bd4bff;
     --accent-2: #7a07c7;
     --text-secondary: #B3B3B3;
