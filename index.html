@@ -52,7 +52,7 @@
 
 <body>
     <header class="main-header">
-        <div class="container">
+        <div class="container" id="Hero-cta">
             <div class="logo-container">
                 <a href="https://rayoneai.com/" class="logo-link">   
                      <img src="assets/rayone-logo.png" alt="Rayone Logo">   
@@ -61,15 +61,13 @@
             </div>            <nav class="main-nav" id="main-nav">
                 <a href="#blog">Blogs</a>
                 <a href="https://github.com/RayOneAi" target="_blank" class="github-nav-link"><i class="fab fa-github"></i> GitHub</a>
-                <button class="primary-button"
-                    onclick="document.getElementById('footer-cta').scrollIntoView({behavior: 'smooth'});">Try
-                    for Free </button>
+               
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero-section">
+        <section class="hero-section" id="hero-section">
             <div class="container">
                 <div class="hero-content">
                     <div>
@@ -83,7 +81,10 @@
                     <p class="subtitle">Instant API access to Mistral, LLaMA, Gemma, and more — hosted, scalable, and
                         ready to deploy.</p>                    <div class="cta-buttons">
                         <!-- <button class="secondary-button">Book a Demo</button> -->
-                     
+                        <form class="signup-form" data-form-type="email-capture" data-source="footer_waitlist">
+                            <input type="email" style="color: black;" name="email" placeholder="Enter your email" required>
+                            <button type="submit" class="primary-button">Join Waitlist</button>
+                        </form>
                     </div>
                     <!-- <div class="code-snippet-card">
                         <pre><code class="language-bash">
@@ -268,10 +269,11 @@ print(output)</code></pre>
             <section class="cta-section" id="footer-cta">
                 <div class="container">
                     <h2>Try it now → rayone.com</h2>
-                    <p>No setup. No GPUs. Just APIs.</p>                    <form class="signup-form" data-form-type="email-capture" data-source="footer_waitlist">
-                        <input type="email" style="color: black;" name="email" placeholder="Enter your email" required>
-                        <button type="submit" class="primary-button">Join Waitlist</button>
-                    </form>
+                    <p>No setup. No GPUs. Just APIs.</p>                    
+                    <button class="primary-button"
+                    onclick="document.getElementById('hero-section').scrollIntoView({behavior: 'smooth'});">Try
+                    for Free </button>
+
                     <!-- <div class="github-signup">
                         <button class="github-button">
                             <i class="fab fa-github"></i>
