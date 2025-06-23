@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
 
                     // Since we are using no-cors, we can't directly read response.text()
-                    formMessage.textContent = 'Thanks for your interest! We\'ll keep you updated.';
+                    formMessage.textContent = 'Thanks for your interest! We will keep you updated.';
                     formMessage.style.color = 'lightgreen';
                     emailForm.reset();
                 } catch (error) {
