@@ -318,4 +318,118 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // RayoneAI Questionnaire Modal Logic
+    (function() {
+        const QUESTIONS = [
+            {
+                q: 'What best describes your role?',
+                options: ['Developer', 'Startup founder', 'Enterprise team', 'Researcher', 'Student']
+            },
+            {
+                q: 'How do you plan to use AI in your projects?',
+                options: ['Internal tools', 'Customer-facing apps', 'Prototyping ideas', 'Learning/experiments', 'Not sure yet']
+            },
+            {
+                q: 'What features matter most to you?',
+                options: ['Speed', 'Cost', 'Model variety', 'API ease of use']
+            },
+            {
+                q: 'Which LLMs do you prefer?',
+                options: ['Mistral', 'LLaMA 3', 'Falcon', 'Any open-source model', 'Not decided']
+            },
+            {
+                q: 'Are you currently using any hosted LLM services?',
+                options: ['Yes, actively', 'I\'ve tried a few', 'Planning to try soon', 'Not yet']
+            }
+        ];
+        let currentStep = 0;
+        let answers = Array(QUESTIONS.length).fill(null);
+        let modal, content;
+
+        function createModal() {
+            modal = document.getElementById('rayone-questionnaire-modal');
+            content = modal.querySelector('.rayone-modal-content');
+            renderStep();
+            modal.style.display = 'block';
+            setTimeout(() => { modal.style.opacity = 1; }, 10);
+            // Trap focus for accessibility
+            setTimeout(() => {
+                const firstRadio = content.querySelector('input[type=radio]');
+                if (firstRadio) firstRadio.focus();
+            }, 100);
+        }
+
+        function closeModal() {
+            modal.style.opacity = 0;
+            setTimeout(() => { modal.style.display = 'none'; }, 250);
+        }
+
+        function renderStep() {
+            if (currentStep >= QUESTIONS.length) {
+                content.innerHTML = `
+                    <button class="rayone-modal-close" aria-label="Close" onclick="document.getElementById('rayone-questionnaire-modal').style.display='none'">&times;</button>
+                    <div class="rayone-modal-thankyou">Thank you for your feedback! 🎉</div>
+                `;
+                return;
+            }
+            const qObj = QUESTIONS[currentStep];
+            let optionsHtml = qObj.options.map((opt, i) => `
+                <label class="rayone-modal-option">
+                    <input type="radio" name="rayone-q${currentStep}" value="${opt.replace(/"/g, '&quot;')}" ${answers[currentStep]===opt?'checked':''} />
+                    <span>${opt}</span>
+                </label>
+            `).join('');
+            content.innerHTML = `
+                <button class="rayone-modal-close" aria-label="Close" onclick="document.getElementById('rayone-questionnaire-modal').style.display='none'">&times;</button>
+                <div class="rayone-modal-title" id="rayone-modal-title">Help us personalize Rayone for you</div>
+                <div class="rayone-modal-question">${qObj.q}</div>
+                <form class="rayone-modal-options" autocomplete="off">${optionsHtml}</form>
+                <div class="rayone-modal-buttons">
+                    <button type="button" class="rayone-btn rayone-btn-cancel">Cancel</button>
+                    <button type="button" class="rayone-btn rayone-btn-skip">Skip</button>
+                    <button type="button" class="rayone-btn rayone-btn-accent" disabled>Continue</button>
+                </div>
+            `;
+            // Button logic
+            const radios = content.querySelectorAll('input[type=radio]');
+            const btnContinue = content.querySelector('.rayone-btn-accent');
+            const btnSkip = content.querySelector('.rayone-btn-skip');
+            const btnCancel = content.querySelector('.rayone-btn-cancel');
+            // Enable continue if selected
+            radios.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    btnContinue.disabled = false;
+                });
+            });
+            // Pre-enable if already answered
+            if (answers[currentStep]) btnContinue.disabled = false;
+            // Continue
+            btnContinue.onclick = () => {
+                const selected = Array.from(radios).find(r => r.checked);
+                if (selected) answers[currentStep] = selected.value;
+                currentStep++;
+                renderStep();
+            };
+            // Skip
+            btnSkip.onclick = () => {
+                answers[currentStep] = null;
+                currentStep++;
+                renderStep();
+            };
+            // Cancel
+            btnCancel.onclick = closeModal;
+            // Close (X)
+            content.querySelector('.rayone-modal-close').onclick = closeModal;
+        }
+
+        // Show modal after 3s
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                if (!document.getElementById('rayone-questionnaire-modal')) return;
+                createModal();
+            }, 3000);
+        });
+    })();
+    // End RayoneAI Questionnaire Modal Logic
 });

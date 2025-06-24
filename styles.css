@@ -1063,3 +1063,119 @@ footer {
         height: 56px;
     }
 }
+
+/* RayoneAI Questionnaire Modal Styles */
+#rayone-questionnaire-modal {
+  min-width: 225px;
+  background-color: white;
+  max-width: 71vw;
+}
+#rayone-questionnaire-modal .rayone-modal-content {
+  min-width: 180px;
+  max-width: 285px;
+  padding: 24px 18px 16px 18px;
+}
+#rayone-questionnaire-modal .rayone-modal-title {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #7a07c7;
+  font-weight: 800;
+
+}
+#rayone-questionnaire-modal .rayone-modal-question {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: #000000;
+  font-weight: 500;
+}
+#rayone-questionnaire-modal .rayone-modal-options {
+  margin-bottom: 24px;
+}
+#rayone-questionnaire-modal .rayone-modal-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #222;
+}
+#rayone-questionnaire-modal .rayone-modal-option input[type="radio"] {
+  accent-color: #7a07c7;
+  margin-right: 7px;
+  width: 13px;
+  height: 13px;
+}
+#rayone-questionnaire-modal .rayone-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+#rayone-questionnaire-modal .rayone-btn {
+  border: none;
+  border-radius: 0px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  background: #f3f3f3;
+  color: #222;
+}
+#rayone-questionnaire-modal .rayone-btn-accent {
+  background: #7a07c7;
+  color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(122,7,199,0.10);
+}
+#rayone-questionnaire-modal .rayone-btn-accent:disabled {
+  background: #e2d6ee;
+  color: #b3a3c7;
+  cursor: not-allowed;
+}
+#rayone-questionnaire-modal .rayone-btn-cancel {
+  background: transparent;
+  color: #7a07c7;
+  border: 1.5px solid #7a07c7;
+}
+#rayone-questionnaire-modal .rayone-btn-cancel:hover {
+  background: #f7f2fc;
+}
+#rayone-questionnaire-modal .rayone-btn:hover:not(:disabled) {
+  filter: brightness(0.95);
+}
+#rayone-questionnaire-modal .rayone-modal-thankyou {
+  text-align: center;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #7a07c7;
+  padding: 18px 0 10px 0;
+}
+#rayone-questionnaire-modal .rayone-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #7a07c7;
+  cursor: pointer;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  #rayone-questionnaire-modal {
+    bottom: 0;
+    right: 0;
+    min-width: 0;
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 0;
+  }
+  #rayone-questionnaire-modal .rayone-modal-content {
+    padding: 12px 4vw 10px 4vw;
+    min-width: 0;
+    max-width: 100vw;
+    border-radius: 0;
+  }
+}
+/* End RayoneAI Questionnaire Modal Styles */
