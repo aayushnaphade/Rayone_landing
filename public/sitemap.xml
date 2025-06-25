@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://rayoneai.com/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://rayoneai.com/assets/Dashboard_img.png</image:loc>
+            <image:title>Rayone Dashboard Interface</image:title>
+            <image:caption>Rayone's LLM API management dashboard showing hosted models</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Blogs List Page -->
+    <url>
+        <loc>https://rayoneai.com/blogs</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Individual Blog Posts -->
+    <url>
+        <loc>https://rayoneai.com/blogs/introducing-rayone</loc>
+        <lastmod>2025-01-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://rayoneai.com/assets/introducing-rayone-blog.png</image:loc>
+            <image:title>Introducing Rayone</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://rayoneai.com/blogs/llm-hosting-guide</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://rayoneai.com/assets/llm-hosting-guide-blog.png</image:loc>
+            <image:title>LLM Hosting Guide</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://rayoneai.com/blogs/mistral-api-tutorial</loc>
+        <lastmod>2025-01-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://rayoneai.com/assets/mistral-api-tutorial-blog.png</image:loc>
+            <image:title>Mistral API Tutorial</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://rayoneai.com/blogs/open-source-llm-comparison</loc>
+        <lastmod>2025-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://rayoneai.com/assets/open-source-llm-comparison-blog.png</image:loc>
+            <image:title>Open Source LLM Comparison</image:title>
+        </image:image>
+    </url>
+    
+</urlset>

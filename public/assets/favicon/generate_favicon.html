@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favicon Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+    .instructions { background: #f5f5f5; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+    .output { margin-top: 20px; }
+    pre { background: #eee; padding: 10px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Rayone Favicon Generator</h1>
+  
+  <div class="instructions">
+    <h2>Instructions:</h2>
+    <p>To generate favicon files from your logo:</p>
+    <ol>
+      <li>Visit <a href="https://realfavicongenerator.net/" target="_blank">RealFaviconGenerator.net</a></li>
+      <li>Upload your logo file (assets/rayone-logo.png)</li>
+      <li>Configure settings (recommended: use your brand color #9f09f7 for theme color)</li>
+      <li>Download the package</li>
+      <li>Extract the files to your <code>assets/favicon</code> directory</li>
+    </ol>
+  </div>
+
+  <div class="preview">
+    <h2>Preview:</h2>
+    <img src="../rayone-logo.png" alt="Rayone Logo" style="max-width: 200px;">
+  </div>
+
+  <div class="output">
+    <h2>HTML to Add:</h2>
+    <pre>&lt;link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png"&gt;
+&lt;link rel="manifest" href="/assets/favicon/site.webmanifest"&gt;
+&lt;link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#9f09f7"&gt;
+&lt;meta name="msapplication-TileColor" content="#9f09f7"&gt;
+&lt;meta name="theme-color" content="#9f09f7"&gt;</pre>
+  </div>
+</body>
+</html>

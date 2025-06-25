@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# Main sitemap
+Sitemap: https://rayoneai.com/sitemap.xml
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block unnecessary bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Crawl delay for good behavior
+Crawl-delay: 1
+
+# Host specification
+Host: https://rayoneai.com
