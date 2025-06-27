@@ -24,23 +24,54 @@ const Footer = () => {
                     </div>
                 </section>
                 <div className="footer-bottom">
-                    <p>© 2025 RayoneAI All rights reserved.</p>
-                    <div className="footer-contact">
-                        <a href="mailto:contact@rayoneai.com" style={{color:'#000000', textDecoration:'none'}}>
+                    <div className="footer-info">
+                        <span>© 2025 RayoneAI All rights reserved.</span>
+                        <span className="footer-separator">•</span>
+                        <a href="mailto:contact@rayoneai.com" className="footer-contact-link">
                             Contact Us: contact@rayoneai.com
                         </a>
                     </div>
-                    <div className="social-icons">
-                        <p>Follow us on:</p>
-                        <a href="https://www.producthunt.com/products/rayone" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-product-hunt"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/rayoneai/" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/RayOneAi" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-github"></i>
-                        </a>
+                    
+                    <div className="footer-connect">
+                        <span className="connect-label">Connect with us:</span>
+                        <div className="connect-buttons">
+                            <a 
+                                href="https://chat.whatsapp.com/FVTPA6jy2DJBn1QKBKg3Bm" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="connect-btn whatsapp-btn"
+                            >
+                                <i className="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a 
+                                href="https://www.linkedin.com/company/rayoneai/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="connect-btn linkedin-btn"
+                            >
+                                <i className="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a 
+                                href="https://www.producthunt.com/products/rayone" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="connect-btn producthunt-btn"
+                            >
+                                <i className="fab fa-product-hunt"></i>
+                                <span>Product Hunt</span>
+                            </a>
+                            <a 
+                                href="https://github.com/RayOneAi" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="connect-btn github-btn"
+                            >
+                                <i className="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
