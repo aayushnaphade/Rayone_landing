@@ -1,156 +1,178 @@
-# Rayone AI - React.js Website
+# EnergyFlow - ESCo SaaS Website
 
-This is the React.js version of the Rayone AI website, converted from the original HTML/CSS/JavaScript implementation.
+A professional SaaS company website for Energy Services Companies (ESCos), built with Next.js 14 and TailwindCSS. Inspired by modern energy management platforms with a clean, corporate design using blue and green color palette.
 
 ## 🚀 Features
 
-- **Modern React Architecture**: Component-based structure with React Router for navigation
-- **Responsive Design**: Mobile-first design that works on all devices
-- **Blog System**: Dynamic blog posts with individual post pages
-- **Email Signup**: Integrated waitlist signup functionality
-- **SEO Optimized**: Proper meta tags and structured data
-- **Performance Optimized**: Fast loading and smooth animations
+- **Modern Design**: Clean, minimal corporate style with energy-themed color palette
+- **Responsive**: Fully mobile-friendly across all devices
+- **Performance**: Built with Next.js 14 for optimal performance
+- **SEO Optimized**: Proper meta tags and semantic HTML structure
+- **Accessibility**: WCAG compliant with proper contrast ratios and keyboard navigation
 
-## 📁 Project Structure
+## 📁 Website Structure
 
-```
-src/
-├── components/          # Reusable React components
-│   ├── Header.js       # Navigation header
-│   ├── Footer.js       # Site footer
-│   └── EmailSignupForm.js  # Email subscription form
-├── pages/              # Page components
-│   ├── Home.js         # Main homepage
-│   └── BlogPost.js     # Individual blog post pages
-├── data/
-│   └── blogData.js     # Blog posts data
-├── App.js              # Main app component
-├── App.css             # Global styles
-└── index.js            # React app entry point
-```
+### Pages Included:
+- **Homepage**: Hero section, key features, solutions preview, testimonials
+- **Features**: Detailed feature explanations with interactive elements
+- **Solutions**: Industry-specific solutions (Corporate, Manufacturing, Healthcare, Government)
+- **About Us**: Company mission, team, partners, awards
+- **Resources**: Blog, guides, webinars, and industry insights
+- **Contact**: Contact form, company information, FAQ section
 
-## 🛠️ Technologies Used
+### Key Components:
+- Responsive navigation header
+- Professional footer with links and social media
+- Reusable UI components with consistent styling
+- Smooth animations and hover effects
 
-- **React 18**: Latest React with hooks
-- **React Router DOM**: Client-side routing
-- **CSS3**: Modern CSS with CSS variables and animations
-- **Font Awesome**: Icon library
-- **Google Fonts**: Inter and JetBrains Mono fonts
+## 🎨 Design System
 
-## 🏃‍♂️ Getting Started
+### Color Palette:
+- **Primary Blue**: `#0284c7` (Professional, trustworthy)
+- **Secondary Green**: `#16a34a` (Energy, sustainability)
+- **Accent Orange**: `#d97706` (Call-to-action highlights)
+
+### Typography:
+- **Font**: Inter (Modern, clean sans-serif)
+- **Hierarchy**: Clear heading structure with proper sizing
+
+### Layout:
+- Grid-based responsive design
+- Consistent spacing and padding
+- Clean sections with proper visual hierarchy
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Styling**: TailwindCSS for utility-first CSS
+- **Icons**: Lucide React for consistent iconography
+- **TypeScript**: Full type safety
+- **Responsive**: Mobile-first design approach
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (version 14 or higher)
+- Node.js 18+ 
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository
-```bash
-git clone <your-repo-url>
-cd RayoneAI
-```
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd esco-saas-website
+   ```
 
-2. Install dependencies
-```bash
-npm install
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-3. Start the development server
-```bash
-npm start
-```
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-The app will open in your browser at `http://localhost:3000`
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-### Building for Production
+### Build for Production
 
 ```bash
 npm run build
+npm start
 ```
 
-This creates an optimized production build in the `build/` folder.
+## 📱 Responsive Breakpoints
 
-## 📝 Key Changes from Original
+- **Mobile**: 320px - 768px
+- **Tablet**: 768px - 1024px  
+- **Desktop**: 1024px+
 
-### 1. **Component Structure**
-- Converted HTML sections into reusable React components
-- Separated concerns with dedicated components for Header, Footer, etc.
+## 🎯 Key Features Highlighted
 
-### 2. **Routing**
-- Implemented React Router for navigation between home and blog posts
-- Clean URLs for blog posts (`/blogs/1`, `/blogs/2`, etc.)
+### For ESCos:
+- Energy Project Tracking
+- Client Reporting & Dashboards
+- Savings Forecasting
+- Compliance & Documentation
+- AI-based Analytics
+- Client Management
 
-### 3. **State Management**
-- Used React hooks for form handling and component state
-- Dynamic content rendering for blog posts
+### Industry Solutions:
+- Corporate & Real Estate
+- Manufacturing & Industrial
+- Healthcare Facilities
+- Government & Public Sector
 
-### 4. **Asset Management**
-- Moved all assets to `public/assets/` folder
-- Updated all image paths to work with React's public folder structure
+## 📊 Performance Optimizations
 
-### 5. **JavaScript Modernization**
-- Converted vanilla JavaScript to React event handlers
-- Used modern ES6+ syntax and React patterns
+- Next.js Image optimization
+- Lazy loading for images and components
+- Minimal JavaScript bundle size
+- CSS optimization with TailwindCSS purging
+- SEO-friendly routing and meta tags
 
-## 🎨 Styling
+## 🔧 Customization
 
-The original CSS has been preserved and adapted for React:
-- All original animations and transitions maintained
-- CSS variables for consistent theming
-- Responsive design breakpoints unchanged
-- Modern CSS Grid and Flexbox layouts
+### Colors
+Update the color palette in `tailwind.config.js`:
+```javascript
+colors: {
+  primary: { /* Blue shades */ },
+  secondary: { /* Green shades */ },
+  accent: { /* Orange shades */ }
+}
+```
 
-## 📱 Pages
+### Content
+- Update company information in components
+- Modify hero headlines and descriptions
+- Add your own testimonials and case studies
+- Replace placeholder contact information
 
-### Home Page (`/`)
-- Hero section with email signup
-- Features showcase
-- Technology stack display
-- Workflow explanation
-- Integration examples
-- Blog posts preview
+### Styling
+- All styles use TailwindCSS utility classes
+- Custom components in `app/globals.css`
+- Responsive design with mobile-first approach
 
-### Blog Post Page (`/blogs/:id`)
-- Individual blog post display
-- Dynamic content loading
-- SEO-optimized meta tags
-- Author information and social links
+## 📈 SEO Features
 
-## 🔧 Configuration
-
-### Email Signup
-The email signup functionality uses Google Apps Script. Update the `APPS_SCRIPT_URL` in `src/components/EmailSignupForm.js` if needed.
-
-### Blog Posts
-Add new blog posts by editing `src/data/blogData.js`. Each post should have:
-- `id`: Unique identifier
-- `title`: Post title
-- `date`: Publication date
-- `author`: Author name
-- `authorImg`: Author profile image URL
-- `authorLinkedIn`: Author LinkedIn profile
-- `img`: Featured image path
-- `excerpt`: Short description
-- `content`: Full HTML content
+- Semantic HTML structure
+- Proper heading hierarchy (H1-H6)
+- Meta descriptions and titles
+- Open Graph tags for social sharing
+- Structured data markup ready
+- Fast loading times
 
 ## 🚀 Deployment
 
-The built React app is ready for deployment to any static hosting service:
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
+
+### Other Platforms
 - Netlify
-- Vercel
-- GitHub Pages
-- AWS S3 + CloudFront
-- Firebase Hosting
+- AWS Amplify
+- DigitalOcean App Platform
+
+## 📞 Support
+
+For questions about implementation or customization:
+- Review the code comments
+- Check TailwindCSS documentation
+- Refer to Next.js documentation
 
 ## 📄 License
 
-This project is proprietary to RayoneAI.
-
-## 🤝 Contributing
-
-Contact the RayoneAI team for contribution guidelines.
+This project is created for demonstration purposes. Customize as needed for your business.
 
 ---
 
-**Built with ❤️ by the RayoneAI Team**
+**Built with ❤️ for the Energy Services Industry**

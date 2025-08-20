@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #374151;
+    background-color: #ffffff;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 inline-block text-center no-underline;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-600 hover:bg-secondary-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 inline-block text-center no-underline;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 inline-block text-center no-underline;
+  }
+  
+  .section-padding {
+    @apply py-12 px-4 sm:py-16 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  /* Header specific styles */
+  .header-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Navigation styles */
+  .nav-link {
+    @apply text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 py-2 px-1;
+  }
+  
+  /* Typography improvements */
+  .hero-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight;
+  }
+  
+  .hero-subtitle {
+    @apply text-lg sm:text-xl text-gray-600 leading-relaxed;
+  }
+  
+  .section-title {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto;
+  }
+}
+/* Addit
+ional layout fixes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .no-underline {
+    text-decoration: none !important;
+  }
+  
+  /* Ensure proper spacing for mobile */
+  @media (max-width: 640px) {
+    .section-padding {
+      @apply py-8 px-4;
+    }
+    
+    .hero-title {
+      @apply text-2xl leading-tight;
+    }
+    
+    .hero-subtitle {
+      @apply text-base;
+    }
+    
+    .section-title {
+      @apply text-xl;
+    }
+    
+    .section-subtitle {
+      @apply text-base;
+    }
+  }
+  
+  /* Fix for overlapping content */
+  .min-h-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ensure proper stacking context */
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  
+  /* Better button spacing */
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sticky {
+    position: static;
+  }
+  
+  .shadow-sm,
+  .shadow-lg,
+  .shadow-2xl {
+    box-shadow: none;
+  }
+}
