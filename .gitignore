@@ -5,11 +5,17 @@
 /.pnp
 .pnp.js
 
+# npm lock file
+package-lock.json
+
 # testing
 /coverage
 
 # production
 /build
+
+# Next.js build output
+.next
 
 # misc
 .DS_Store

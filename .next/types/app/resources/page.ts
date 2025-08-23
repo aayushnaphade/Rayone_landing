@@ -1,4 +1,4 @@
-// File: C:\Users\mahes\Documents\GitHub\Rayone_landing\app\resources\page.tsx
+// File: /workspaces/Rayone_landing/app/resources/page.tsx
 import * as entry from '../../../../app/resources/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
